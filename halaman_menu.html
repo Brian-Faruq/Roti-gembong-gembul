@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roti Gembong Gembul Jambi</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      padding-top: 50px;
+      background-color: #fffef7;
+    }
+
+    .navbar {
+      box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+      animation: slideDown 1s ease forwards;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #5d4037 !important;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      color: #4e342e !important;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: #fff3cd !important;
+      background: rgba(0,0,0,0.1);
+      border-radius: 8px;
+      padding: 5px 10px;
+    }
+
+    .bg-gradient {
+      background: linear-gradient(90deg, #ffffff, #ffcc00, #ff9900, #ff5e00, #ff9900, #ffcc00) !important;
+    }
+
+    /* Bagian Menu */
+    .menu-header {
+      background: linear-gradient(135deg, #ffcc00, #ffeaa7);
+      color: #333;
+      display: inline-block;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .menu-header:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-card {
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+      background: #fffbea;
+      border-radius: 15px;
+    }
+
+    .menu-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .menu-card img {
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+    }
+
+    /* Footer sama seperti halaman sebelumnya */
+    .footer {
+      background-color: #000;
+      font-size: 15px;
+    }
+
+    .footer-bottom {
+      background-color: #6b3a1f;
+      font-weight: 500;
+    }
+
+    .footer h5, .footer h6 {
+      color: #fff;
+    }
+
+    .footer p, .footer li {
+      color: #ccc;
+    }
+
+    .social-btn {
+      border: 1px solid #ffb84d;
+      color: #ffb84d;
+      padding: 6px 14px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .social-btn:hover {
+      background-color: #ffb84d;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    .footer img {
+      transition: transform 0.3s ease;
+    }
+
+    .footer img:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50px;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      z-index: 9999;
+      transition: all 0.2s ease;
+      animation: floatPulse 2s infinite ease-in-out;
+    }
+
+    .whatsapp-float i {
+      font-size: 26px;
+      margin-right: 10px;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #20ba5a;
+    }
+
+    @keyframes slideDown {
+      0% { transform: translateY(-100%); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes floatPulse {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-gradient fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="kau.png" alt="Logo" width="40" class="me-2">
+        <span class="fw-bold d-none d-lg-inline">Roti Gembul</span>
+      </a>
+
+      <div class="collapse navbar-collapse d-none d-lg-block">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="halaman_beranda.html"><i class="bi bi-house-door"></i> Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="halaman_tentangkami.html"><i class="bi bi-info-circle"></i> Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link active" href="halaman_menu.html"><i class="bi bi-list-ul"></i> Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="halaman_kontak.html"><i class="bi bi-telephone"></i> Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BAGIAN MENU -->
+  <section id="menu" class="py-5" data-animate style="background-color:#f5f5f5;">
+    <div class="container text-center">
+      <div class="menu-header p-4 mb-5 rounded-4 shadow-sm">
+        <h2 class="fw-bold mb-2 text-dark">Daftar Menu Gembul Jambi!</h2>
+        <p class="text-muted m-0">Menu Terbaru 2025 – Pilih rasa favoritmu dan nikmati kelembutan Roti Gembul Jambi setiap hari!</p>
+      </div>
+  
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-4 col-md-6">
+          <div class="card menu-card border-0 shadow-sm h-100">
+            <img src="2024_1.jpg" class="card-img-top rounded-3" alt="Menu Gembul 1">
+          </div>
+        </div>
+  
+        <div class="col-lg-4 col-md-6">
+          <div class="card menu-card border-0 shadow-sm h-100">
+            <img src="2024_2.jpg" class="card-img-top rounded-3" alt="Menu Gembul 2">
+          </div>
+        </div>
+  
+        <div class="col-lg-4 col-md-6">
+          <div class="card menu-card border-0 shadow-sm h-100">
+            <img src="2024_3.jpg" class="card-img-top rounded-3" alt="Menu Gembul 3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer text-light pt-5" id="kontak">
+    <div class="container pb-4">
+      <div class="row gy-4">
+        <div class="col-md-6 col-lg-4">
+          <h5 class="fw-bold mb-2 text-warning">Operasional Kantor Pusat</h5>
+          <p class="mb-1">Senin - Sabtu | 08:00 - 16:00</p>
+          <h6 class="fw-bold mt-3">Kantor Pusat</h6>
+          <p class="mb-1">Jl. Soekarno Hatta, Drojogan 05/03 Bumirejo,<br>Mungkid, Magelang, Jawa Tengah</p>
+          <h6 class="fw-bold mt-3">E-mail</h6>
+          <p class="mb-0">gembonggembul.id@gmail.com</p>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <h5 class="fw-bold mb-2 text-warning">Operasional Gerai</h5>
+          <p>Senin - Minggu | 10:00 - 22:00</p>
+          <h6 class="fw-bold mt-4">Temukan kami di</h6>
+          <div class="d-flex align-items-center gap-3 mt-2">
+            <img src="pngtree-shopefood-logo-png-image_8801636.png" alt="ShopeeFood" width="45">
+            <img src="logo-grab-food.png" alt="GrabFood" width="45">
+            <img src="Screenshot_2025-10-04_142518-removebg-preview.png" alt="GoFood" width="45">
+          </div>
+        </div>
+
+        <div class="col-md-12 col-lg-4 text-md-start text-center">
+          <h6 class="fw-bold mb-3 text-warning">Alamat Cabang Jambi</h6>
+          <ul class="list-unstyled text-light small">
+            <li class="mb-2">
+              <strong>Gembul Jambi 1:</strong><br>
+              Jl. Soekarno-Hatta No.45, Thehok, Kota Jambi
+            </li>
+            <li>
+              <strong>Gembul Jambi 2:</strong><br>
+              Jl. M. Yamin No.12, Talang Banjar, Kota Jambi
+            </li>
+          </ul>
+          <h6 class="fw-bold mb-3 text-warning mt-3">Ikuti kami di</h6>
+          <div class="d-flex justify-content-md-start justify-content-center gap-3">
+            <a href="#" class="social-btn"><i class="bi bi-instagram"></i> Instagram</a>
+            <a href="#" class="social-btn"><i class="bi bi-youtube"></i> Youtube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom py-3 mt-4">
+      <div class="container text-center text-light">
+        2025 – <strong>Roti Gembong Gembul</strong> | Pelopor Roti Gembong Kekinian No.1 di Indonesia
+      </div>
+    </div>
+  </footer>
+
+  <!-- Tombol WhatsApp -->
+  <a href="https://wa.me/6281234567890" target="_blank" class="whatsapp-float">
+    <i class="bi bi-whatsapp"></i>
+    <span>Pesan Sekarang</span>
+  </a>
+
+  <script>
+    const animatedElements = document.querySelectorAll('[data-animate]');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    animatedElements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
